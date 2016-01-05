@@ -40,7 +40,11 @@ Reuse values directly in following calls
 payment := gp.Payment{Token:"tok_000000000000", Client: client.ID}.New(&p)
 
 // Create a recurring subscritpion with new payment method
-subscription := gp.Subscription{Offer:"offer_0000000000000000", Client: client.ID, Payment: payment.ID}.New(&p)
+subscription := gp.Subscription{
+    Offer:   "offer_0000000000000000", 
+    Client:  client.ID, 
+    Payment: payment.ID,
+}.New(&p)
 
 ```
 
