@@ -1,4 +1,4 @@
-# gopaymill
+# Go Paymill
 
 Here is how to connect to and interact with the Paymill API in Go.
 
@@ -55,5 +55,18 @@ The values in all the models are directly accesible after the call as:
 fmt.Println("Subscription ID: "+subscription.ID)
 
 fmt.Println("Client email: "+client.Email)
+
+```
+
+## Get one, Get all
+
+```
+// Lookup by key
+payment := gp.Payment{ID:"pay_000000000000"}.Get(&p)
+
+
+// Get all  []Transaction
+transaction := gp.Transaction{}.All(&p)
+
 
 ```
