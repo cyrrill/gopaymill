@@ -4,23 +4,30 @@ Here is how to connect to and interact with the Paymill API in Go.
 
 Each model type is mapped to a struct, which has New() Get() All() methods.
 
-*Client
-*Payment
-*Transaction
-*Subscription
+* Client
+* Payment
+* Transaction
+* Subscription
+
+
+## Connect
+
+Import the package into your app and 
 
 ```
 package yourapp
 
 import (
-  "fmt"
-
-	gp "github.com/cyrrill/gopaymill"
+    "fmt"
+    gp "github.com/cyrrill/gopaymill"
 )
 
 // Creates a conncetion client using your private API key
 p := gp.Paymill{PrivateKey: "@see https://app.paymill.com/development/api-keys"}
+```
 
+The create individual structs and call the action method on the Paymill connection &p
+```
 // Creates a new client 
 client := gp.Client{Description: "Golang", Email: "test@golang.org"}.New(&p)
 
