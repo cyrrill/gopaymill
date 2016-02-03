@@ -19,7 +19,7 @@ type Transaction struct {
 	Currency          string        `json:"currency"`
 	ResponseCode      int           `json:"response_code"`
 	ShortID           string        `json:"short_id"`
-	Is_Fraud          bool          `json:"is_fraud"`
+	IsFraud           bool          `json:"is_fraud"`
 	Invoices          []interface{} `json:"invoices"`
 	Items             []interface{} `json:"items"`
 	ShippingAddress   interface{}   `json:"-"`
