@@ -22,8 +22,8 @@ import (
     gp "github.com/cyrrill/gopaymill"
 )
 
-// Creates a conncetion client using your private API key
-p := gp.Paymill{PrivateKey: "@see https://app.paymill.com/development/api-keys"}
+// Creates a client connection using a key: https://app.paymill.com/development/api-keys
+p := gp.Paymill{PrivateKey: "000000000000000000"}
 ```
 
 ## Models
